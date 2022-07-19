@@ -1,0 +1,255 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+
+
+*{
+	boxing-sizing: border-box;
+}
+p{
+	padding:5px;
+	postion:fixed;
+	width:100%;
+}
+
+body{
+	background-color:white;
+	padding:14px;
+	font-family:;
+}
+.main{
+	max-width: 1000px;
+	margin: auto;
+	padding: 14px;
+	boxing-sizing: border-box;
+	border: 15px solid blue;
+}
+.row{
+	margin: 8px 16px;
+}
+.row,
+.row > .column{
+	padding: 8px;
+}
+.column{
+	float: left;
+	width: 25%;
+}
+.row:after{
+	content:"";
+	display: table;
+	clear: both;
+}	
+.content{
+	background-color:white;
+	padding: 10px;
+}
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.navigation{
+	grid-area: navigation;
+}
+.left-column{
+	grid-area:left-column;
+}
+
+.right-column{
+	grid-area:right-column;
+}
+
+#wrapper{
+	display:grid;
+	grid-template-column: 1fr 1fr
+	grid-template-column: 3em 30em
+	grid-template-area: "navigation navigation" "left-column right-column";
+	gap: 10px;
+}
+
+
+footer{
+	border:1px solid blue;
+	padding:5px;
+	bottom:0;
+	left:0;
+	width:100%;
+	position:fixed;
+	background-color: blue;
+}
+form{
+	border: 1px solid blue;
+	padding: 5px;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+	margin-top: 6px;
+	resize: vertical;
+
+}
+.container{
+	border-radius: 5px;
+	background-color:white;
+	padding: 20px;
+
+}
+nput[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+</style>
+<title>Jardin Douglas</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<div class="topnav">
+  <a href="C:\Users\admin\Documents\Documents\github\Portfolio\portfolio web.html">Home</a>
+  <a href="C:\Users\admin\Documents\Documents\github\Portfolio\portfolio.html">Portfolio</a>
+  <a href="C:\Users\admin\Documents\Documents\github\Portfolio\contact .html" class="right">Contact</a>
+</div>
+<!-- <div> -->
+<!-- <p>My name is Jardin Douglas, and I am a self taught full stack developer. I am currently live in Fort Myers, FL. </p> -->
+<!-- </div> -->
+<div class="main">
+<!-- <div id="wrapper"> -->
+	<!-- <div class="navigation"></div> -->
+	<!-- <div class="left-column"></div> -->
+	<!-- <div class="right-column"></div> -->
+<!-- </div> -->
+<div class="row">
+<div class="column">
+<div class="content">
+
+
+<!-- <div class="row"> -->
+<!-- <div class="column"> -->
+<!-- <div class="content"> -->
+<form>
+Name:<br>
+<input></input><br>
+Contact:<br>
+<input></input><br>
+Description:<br>
+<textarea row = "5" col = "80"></textarea><br><br>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</div>
+<footer>
+<a href="https://www.linkedin.com/in/jardin-douglas-b67a1568/">Linkedin</a>
+<a href="https://github.com/Kingjd67">Github</a>
+</footer>
+<script>
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+console.log("Welcome to my website!");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Game</title>
+
+<style>
+#board{
+	width: 640px;
+	height: 480px;
+	margin: auto;
+	padding:25px;
+	background-color:gray;
+	}
+</style>
+</head>
+<body id="board">
+	
+<script type="module">
+const gameType = "awesome";
+alert ('Lets make $(gameType) games!');
+
+const myGuess = Math.floor(Math.random() * 20) + 1;
+let guesses = 0;
+let guess;
+
+while(guess !== myGuess) {
+	guess = parseInt(prompt("What number am I thinking of?"), 10);
+	guesses++;
+	if (guess < myGuess) {
+	alert("Higher.");
+	}else if (guess > myGuess){
+	alert("Lower.");
+	}
+}
+alert('Well done! You got it in ${guesses}!');
+</script>
+</body>
+</html>
